@@ -4,4 +4,8 @@ function BnB() {
   BnB.prototype.addRoom = function (room) {
     this._rooms.push(room);
   };
+
+  BnB.prototype.listRooms = function () {
+    return this._rooms;
+  }
 }
