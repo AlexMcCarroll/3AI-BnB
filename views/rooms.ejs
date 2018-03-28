@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body class="container">
+
+    <main>
+
+      <h4> Would You Like to list a love nest?</h4>
+         <form action = '/addroom' method = "get" >
+           <input type='submit' name='addroom' value ="Add nest">
+         </form>
+       </div>
+
+      <div>
+        <ol id=ol>
+             <%var counter=0%>
+             <% propAll.reverse().forEach(function (room) { %>
+                 <li id="<%counter%>">
+                 <%= room.title %><br>
+                 <%= room.description %><br>
+                 £<%=room.price%> per night
+                 <%counter +=1 %>
+           </li><br>
+          <% }) %>
+           </ol>
+        </div>
+    </main>
+
+</body>
+</html>
+
+
+<ul>
+</ul>
