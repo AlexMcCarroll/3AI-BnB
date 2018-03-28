@@ -12,31 +12,31 @@ router.get('/', function(req, res, next) {
 });
 
 
-
-//show rooms on rooms ejs
-router.get('/addroom', function (req, res) {
-    res.render('addroom');
-});
-
-//add rooms
-router.post('/addroom', function (req, res) {
-  // get data from view and add it to mongo db
-  Room(req.body).save(function(err,data){
-    console.log(data);
-    if (err) throw err;
-  })
-  res.redirect('/rooms');
-});
-
-
-
-//show all rooms
-router.get('/rooms', function (req, res) {
-  Room.find({}, function(err, propAll){
-    console.log(propAll);
-    if (err) throw err;
-  res.render('rooms', {'propAll': propAll});
-  });
-});
+//
+// //show rooms on rooms ejs
+// router.get('/addroom', function (req, res) {
+//     res.render('addroom');
+// });
+//
+// //add rooms
+// router.post('/addroom', function (req, res) {
+//   // get data from view and add it to mongo db
+//   Room(req.body).save(function(err,data){
+//     console.log(data);
+//     if (err) throw err;
+//   })
+//   res.redirect('/rooms');
+// });
+//
+//
+//
+// //show all rooms
+// router.get('/rooms', function (req, res) {
+//   Room.find({}, function(err, propAll){
+//     console.log(propAll);
+//     if (err) throw err;
+//   res.render('rooms', {'propAll': propAll});
+//   });
+// });
 
 module.exports = router;
