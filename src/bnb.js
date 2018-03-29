@@ -1,3 +1,5 @@
+module.exports = function(){
+
 function BnB() {
   this._rooms = [];
 
