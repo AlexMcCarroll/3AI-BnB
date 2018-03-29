@@ -26,7 +26,7 @@ router.get('/add', function(req, res) {
 router.post('/add', function(req, res) {
   // get data from view and add it to mongo db
   Room(req.body).save(function(err, data) {
-    console.log(data);
+    // console.log(data);
     if (err) throw err;
   })
   res.redirect('/rooms');

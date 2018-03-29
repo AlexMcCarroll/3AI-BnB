@@ -19,14 +19,20 @@
         <%var counter=0%>
           <% propAll.reverse().forEach(function (room) { %>
             <li id="<%counter%>">
-              <%= room.title %><br>
-                <%= room.description %><br> £
-                  <%=room.price%> per night
-                    <%counter +=1 %>
+              <%= room.title %><br/>
+                <%= room.description %><br/> £
+                <%=room.price%> per night <br/>
+                Location: <%=room.location%> <br/>
+                Availiblity <%=room.date_from%> to <%= room.date_to %> <br/>
+
+                Contact Name: <%=room.contact_name%> <br />
+                Contact Number: <%= room.contact_number %>
             </li><br>
             <% }) %>
       </ul>
     </div>
+
+    
   </main>
 
 </body>
