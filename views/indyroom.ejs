@@ -49,48 +49,32 @@
         </form>
       </div>
     </nav>
-    <!-- NAV BAR ENDS -->
 
 
-    <div class="jumbotron">
+<div class="container">
 
-    <h1>AAAIR-BNB</h1>
-    <h4>Discover a perfect home away from home.</h4>
 
-        <p> Would you like to have a peep at our love nests?</p>
-                <form action = '/rooms/add' >
-                <input class='btn purple' type='submit' value = "Advertise your nest...">
-                </form>
+
+  <div class="card">
+    <h4 class="card-header">THIS IS A HEADER MANNNNN</h4>
+    <div class="location text-muted">London, UK</div>
+
+    <div class="card-body">
+      <h5 class="card-title text-muted">Special title treatment</h5>
+      <p class="card-text">
+        Come stay with Vinh & Stuart (Awarded one of Australia's top hosts by Airbnb CEO Brian Chesky & key shareholder Ashton Kutcher. We're Sydney's #1 reviewed hosts too). Find out why we've been positively reviewed 500+ times.
+        Please read our listing first (hint hint)
+        We do not accept reservations from people without a verified profile. And please do not make a reservation request before we have exchanged messages. We're keen to chat 1st and make sure we can offer you what you're looking for
+    .</p>
     </div>
+  </div>
 
 
-    <!-- LISTS BOOTSTRAP START -->
-    <div class="row">
+  
 
-      <%var counter=0%>
-        <% propAll.reverse().forEach(function (room) { %>
+  </div>
 
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
-          <a href="#" id="<%= room.id %>"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#"><%= room.title %></a>
-            </h4>
-            <h5><%=room.price%> / night</h5>
-            <p class="card-text"><%= room.description %></p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">★ ★ ★ ★ ☆</small>
-          </div>
-        </div>
-      </div>
-      <% }) %>
-
-    </div>
-    <!-- LIST BOOTTRAP ENDS -->
-
-
+<!-- </div> -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

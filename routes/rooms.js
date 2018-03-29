@@ -22,6 +22,12 @@ router.get('/add', function(req, res) {
   res.render('addroom');
 });
 
+
+router.get('/ind', function(req, res) {
+  res.render('indyroom');
+});
+
+
 // Posts add rooms form and goes back to get /room
 router.post('/add', function(req, res) {
   // get data from view and add it to mongo db
