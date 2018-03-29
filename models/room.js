@@ -9,7 +9,8 @@ const RoomSchema = mongoose.Schema({
   date_from: Date,
   date_to: Date,
   contact_name: String,
-  contact_number: String
+  contact_number: String,
+  image_url: String
 });
 
 module.exports = mongoose.model("Room", RoomSchema);

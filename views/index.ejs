@@ -76,7 +76,14 @@
           <div class="card h-100">
 
             <a href="rooms/ind/?id=<%=room.id%>" id="<%=room.id %>">
-              <img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <%
+              console.log(room.image_url);
+              if (room.image_url === "")
+              photo = "http://placehold.it/700x400"
+              else
+              photo = room.image_url
+              %>
+            <img class="card-img-top" src="<%=photo%>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
               <a href="rooms/ind/?id=<%=room.id%>"><%= room.title %></a>
