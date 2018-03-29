@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var url = require('url');
 var mongoose = require('mongoose');
 var Room = require('../models/room');
 mongoose.connect('mongodb://localhost/aaairbnb');
@@ -9,7 +9,6 @@ mongoose.connect('mongodb://localhost/aaairbnb');
 //show all rooms
 router.get('/', function(req, res) {
   Room.find({}, function(err, propAll) {
-    console.log(propAll);
     if (err) throw err;
     res.render('rooms', {
       'propAll': propAll
@@ -24,7 +23,17 @@ router.get('/add', function(req, res) {
 
 
 router.get('/ind', function(req, res) {
-  res.render('indyroom');
+
+  Room.find({
+    _id: req.query.id
+  }, function(err, result) {
+    if (err) throw err;
+    res.render('indyroom', {
+      'result': result
+    });
+
+  });
+
 });
 
 
@@ -32,7 +41,6 @@ router.get('/ind', function(req, res) {
 router.post('/add', function(req, res) {
   // get data from view and add it to mongo db
   Room(req.body).save(function(err, data) {
-    // console.log(data);
     if (err) throw err;
   })
   res.redirect('/');
