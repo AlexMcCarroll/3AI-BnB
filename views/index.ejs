@@ -1,34 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AAAIR-BNB</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<head>
+  <title>AAAIr BnB</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="script.js"></script>
+</head>
+
   <body>
-    <h1>AAAIR-BNB</h1>
-    <p>Welcome to 'AAAIR Bnb - Luxurious and lascivious rooms for unforgettable nights</p>
+
+    <!-- NAV BAR STARTED -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!-- NAV BAR ENDS -->
+
 
     <div class="jumbotron">
-        <h4> Would you like to have a peep at our love nests?</h4>
+
+    <h1>AAAIR-BNB</h1>
+    <h4>Discover a perfect home away from home.</h4>
+
+        <p> Would you like to have a peep at our love nests?</p>
                 <form action = '/rooms' >
                 <input type='submit' value = "Let the experience begin">
                 </form>
     </div>
 
-    <div>
+    <!-- <div>
       <ul id=ol>
         <%var counter=0%>
           <% propAll.reverse().forEach(function (room) { %>
             <li id="<%counter%>">
-              <%= room.title %><br>
-                <%= room.description %><br> £
-                  <%=room.price%> per night
-                    <%counter +=1 %>
+              <%= room.title %><br/>
+                <%= room.description %><br/> £
+                <%=room.price%> per night <br/>
+                Location: <%=room.location%> <br/>
+                Availiblity <%=room.date_from%> to <%= room.date_to %> <br/>
+
+                Contact Name: <%=room.contact_name%> <br />
+                Contact Number: <%= room.contact_number %>
             </li><br>
             <% }) %>
       </ul>
-    </div>
+    </div> -->
 
+
+    <!-- LIST BOOKSTRAP START -->
+    <div class="row">
+      
+      <%var counter=0%>
+        <% propAll.reverse().forEach(function (room) { %>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#"><%= room.title %></a>
+            </h4>
+            <h5><%=room.price%> / night</h5>
+            <p class="card-text"><%= room.description %></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">★ ★ ★ ★ ☆</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      <% }) %>
+    <!-- LIST BOOKSTRAP START -->
 
   </body>
 </html>
+
+
+
+<head>
