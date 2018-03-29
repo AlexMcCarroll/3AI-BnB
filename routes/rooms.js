@@ -29,7 +29,8 @@ router.post('/add', function(req, res) {
     // console.log(data);
     if (err) throw err;
   })
-  res.redirect('/rooms');
+  res.redirect('/');
+
 });
 
 module.exports = router;
