@@ -12,6 +12,10 @@
         background-color: rgb(150,105,166);
         color: white;
       }
+      a:hover{
+        background-color: rgb(150, 105, 166);
+        color: white;
+      }
     </style>
   <body>
     <!-- NAV BAR STARTED -->
@@ -94,13 +98,11 @@
       <label for="contact_number"> Contact number:</label>
       <input type="text" name="contact_number" class="form-control" required>
     </div>
-
-    <div class="form-group col-md-6">
-      <label for="image_url"> Photo URL:</label>
-      <input type="text" name="image_url" class="form-control" required>
-    </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="/" class = "btn btn-danger float-left">Cancel</a>
+
+      <button type="submit" class="btn btn-primary float-right purple">Submit</button>
+
     </div>
     </div>
     </div>
