@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>AAAIr BnB</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href='/stylesheets/style.css' />
   <script src="script.js"></script>
-
 </head>
-
 <style media="screen">
   .purple {
     background-color: rgb(150, 105, 166);
     color: white;
   }
 </style>
-
 <body>
   <!-- NAV BAR STARTED -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -53,28 +48,20 @@
     </div>
   </nav>
   <!-- NAV BAR ENDS -->
-
-
   <div class="jumbotron">
-
     <h1>AAAIR-BNB</h1>
     <h4>Discover a perfect home away from home.</h4>
-
     <p> Would you like to have a peep at our love nests?</p>
     <form action='/rooms/add'>
       <input class='btn purple' type='submit' value="Advertise your nest...">
     </form>
   </div>
-
-
   <!-- LISTS BOOTSTRAP START -->
   <div class="row">
-
     <%var counter=0%>
       <% propAll.reverse().forEach(function (room) { %>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card h-100">
-
             <a href="rooms/ind/?id=<%=room.id%>" id="<%=room.id %>">
               <%
               console.log(room.image_url);
@@ -99,15 +86,10 @@
           </div>
         </div>
         <% }) %>
-
   </div>
   <!-- LIST BOOTTRAP ENDS -->
-
-
-
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
 </html>

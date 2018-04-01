@@ -21,7 +21,6 @@ router.get('/add', function(req, res) {
   res.render('addroom');
 });
 
-
 router.get('/ind', function(req, res) {
 
   Room.find({
@@ -31,11 +30,8 @@ router.get('/ind', function(req, res) {
     res.render('indyroom', {
       'result': result
     });
-
   });
-
 });
-
 
 // Posts add rooms form and goes back to get /room
 router.post('/add', function(req, res) {
@@ -44,7 +40,6 @@ router.post('/add', function(req, res) {
     if (err) throw err;
   })
   res.redirect('/');
-
 });
 
 module.exports = router;

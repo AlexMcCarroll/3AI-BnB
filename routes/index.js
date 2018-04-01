@@ -15,7 +15,6 @@ router.get('/', function(req, res, next) {
       'propAll': propAll
     });
   });
-
 });
 
 module.exports = router;

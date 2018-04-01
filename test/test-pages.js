@@ -25,11 +25,6 @@ describe('AAAIRBnB', function() {
       it('shows title', function(){
         browser.assert.text('h1', "AAAIR-BNB");
       });
-
-      // it('has an advertise your nest button', function() {
-      //   browser.assert.text("Advertise your nest...");
-      // });
-
   });
 
   describe ('Advertising rooms page opens', function() {

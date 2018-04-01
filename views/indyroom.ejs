@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>AAAIr BnB</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href='/stylesheets/style.css' />
   <script src="script.js"></script>
 </head>
-
 <style media="screen">
   .purple {
     background-color: rgb(150, 105, 166);
@@ -18,14 +16,12 @@
     color: white;
   }
 </style>
-
 <body>
   <!-- NAV BAR STARTED -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -55,16 +51,12 @@
       </form>
     </div>
   </nav>
-
-
   <div class="container">
-
     <div class="card">
       <h4 class="card-header"><%=result[0].title%></h4>
       <div class="location text-muted">
         <%=result[0].location%>
       </div>
-
       <div class="card-body">
         <h5 class="card-title text-muted">£<%=result[0].price%> per night</h5>
         <p class="card-text">
@@ -73,19 +65,14 @@
         <strong>Availability: <%=result[0].date_from.toDateString()%> to <%=result[0].date_to.toDateString()%></strong>
         <p class="card-text">Please contact
           <%=result[0].contact_name%> on
-            <%=result[0].contact_number%>
+          <%=result[0].contact_number%>
         </p>
       </div>
     </div>
     <a href="/" class = "btn purple float-right">return to main page</a>
-
   </div>
-
-  <!-- </div> -->
-
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
 </html>

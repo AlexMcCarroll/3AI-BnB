@@ -13,7 +13,6 @@
     background-color: rgb(150, 105, 166);
     color: white;
   }
-
   a:hover {
     background-color: rgb(150, 105, 166);
     color: white;
@@ -24,9 +23,8 @@
   <!-- NAV BAR STARTED -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -38,7 +36,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Dropdown
-            </a>
+          </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
@@ -59,55 +57,45 @@
   <div class="container">
     <form class="col-6 mx-auto" action='/rooms/add' method='post' id='form1'>
       <div class="form-row">
-
         <div class="form-group col-md-12">
           <label for="title">Title</label>
           <input type="text" name="title" class="form-control" placeholder="Title" required>
         </div>
-
         <div class="form-group col-md-12">
           <label for="description">Description</label>
           <textarea type="text" name='description' class="form-control" placeholder="Description" required></textarea>
         </div>
       </div>
-
       <div class="form-group">
         <label for="price">Price (£)</label>
         <input type="price" name="price" class="form-control" placeholder="£" required>
       </div>
-
       <div class="form-group">
         <label for="location">Location</label>
         <input type="text" name="location" class="form-control" placeholder="Location" required>
       </div>
-
       <div class="form-group col-12">
         <div class="float-left">
           <label for="date_from">Date from</label>
           <input type='date' name='date_from' required>
         </div>
-
         <div class="float-right">
           <label for="date_to">Date to</label>
           <input type='date' name='date_to' required>
         </div>
       </div>
-
       <div class="form-group col-md-6">
         <label for="contact_name"> Contact name:</label>
         <input type="text" name="contact_name" class="form-control" required>
       </div>
-
       <div class="form-group col-md-6">
         <label for="contact_number"> Contact number:</label>
         <input type="text" name="contact_number" class="form-control" required>
       </div>
-
       <div class="form-group col-md-6">
         <label for="image_url"> Photo URL:</label>
         <input type="text" name="image_url" class="form-control" required>
       </div>
-
       <div class="form-group">
         <a href="/" class="btn btn-danger float-left">Cancel</a>
         <button type="submit" class="btn btn-primary float-right purple">Submit</button>
@@ -115,12 +103,9 @@
   </div>
   </div>
   </form>
-
   </div>
-
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
 </html>
