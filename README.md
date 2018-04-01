@@ -11,4 +11,4 @@
 - Learning and implementing a new stack
 
 ## Stack
-![alt text] (https://github.com/AlexMcCarroll/3AI-BnB/blob/master/flow-diagram.png)
+![alt text](https://github.com/AlexMcCarroll/3AI-BnB/blob/master/flow-diagram.png)
